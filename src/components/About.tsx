@@ -17,7 +17,7 @@ const About:React.FC = () => {
                                 <img className='about__logo' src={smallLogo} alt="" />
                                 <h1>about</h1>
                                 <h1>ALX SASA</h1>
-                                <a href="#"><GitHubIcon /><span>project repo</span></a>
+                                <a href="https://github.com/Swizz6ix/alx-sasa"><GitHubIcon /><span>project repo</span></a>
                             </div>
                         </LightSpeed>
                         <div className='about__upRight'>
