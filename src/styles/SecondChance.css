@@ -1,0 +1,91 @@
+.secondChance{
+    /* position: relative; */
+}
+
+.secondChance__width {
+    max-width: 1600px;
+    margin-left: auto;
+    /* margin-right: auto; */
+    position: relative;
+    margin-right: 100px;
+}
+
+.secondChance__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.secondChance__header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.secondChance__title {
+    background-color: #ff3b3b;
+    /* width: 450px; */
+    /* height: 60px; */
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid #5602A1;
+    box-shadow: 0px 4px 4px 0px rgba(86, 2, 161, 0.25);
+    margin-right: 5px;
+    color: #fff;
+}
+
+.secondChance__title > h1 {
+    color: #fff;
+    font-family: Inter;
+    font-size: 15px;
+    font-style: italic;
+    font-weight: 800;
+    line-height: normal;
+    padding: 8px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.secondChance__div {
+    /* margin-top: -10px; */
+}
+
+.secondChance__hard {
+    display: flex;
+    /* flex-direction: column; */
+    /* justify-content: flex-end; */
+    /* align-self: flex-end; */
+    /* align-items: flex-end; */
+    right: 138px;
+    position: absolute;
+}
+
+@media screen and (max-width: 1098px) {
+    .secondChance__width {
+        margin-right: 0;
+    }
+
+    .secondChance__content {
+        justify-content: flex-start;
+        margin-left: 221px;
+    }
+
+    .secondChance__hard {
+        right: 60px;
+    }
+
+    .secondChance__title > h1 {
+        font-size: 11PX;
+        margin-right: 0;
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .secondChance__content {
+        margin-left: 10px;
+    }
+    .secondChance__hard {
+        right: 10px;
+    }
+}

@@ -1,3 +1,6 @@
+* {
+  margin: 0;
+}
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +13,38 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+:root {
+  --background: black;
+  --primary: #074C6D;
+  --secondary: #89c5c6;
+  --accent: #f8cf5b;
+  --text: #fff;
+  --questionColor: #074C6D;
+  --timerBox:  #f8cf5b;
+  --quotes: darkslategray;
+  --quotesCard: #f8cf5b;
+  --meme: darkslategray;
+  --mobileIcon: #fff;
+  --mobileMenu: #89c5c6;
+  --about: lightslategray;
+  --line: 1px solid #f8cf5b;
+}
+
+[data-theme='light'] {
+  --background: white;
+  --text-primary: white;
+  --text-secondary: #fff;
+  --accent: #fff;
+  --text: #000;
+  --questionColor: #fff;
+  --timerBox: #fff;
+  --quotes: #fff;
+  --quotesCard: #ff3b3b;
+  --meme: #074C6D;
+  --mobileIcon: #89c5c6;
+  --mobileMenu: #fff;
+  --about: #000;
+  --line: 0px;
 }

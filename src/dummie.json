@@ -1,0 +1,80 @@
+{
+    "user": 
+    {
+        "userName": "CHARLES",
+        "avatar": "/src/images/IMG_20210823_093523_016.jpg",
+        "currentProjects": 
+        {
+            "firstChance": 
+            [
+                {
+                    "id": 1,
+                    "progress": "100.0% done",
+                    "projectCode": 564,
+                    "projectName": "Build your portfolio project (week2): MVP Complete",
+                    "startedOn": "Aug 25, 2023 6:00 AM",
+                    "deadline": "Sep 1, 2023 11:34 PM"
+                },
+                {
+                    "id": 2,
+                    "progress": "90.0% done",
+                    "projectCode": 312,
+                    "projectName": "Build your portfolio project (week1): Making Progress",
+                    "startedOn": "Aug 25, 2023 6:00 AM",
+                    "deadline": "Sep 4, 2023 6:00 Am"
+                },
+                {
+                    "id": 3,
+                    "progress": "80.0% done",
+                    "projectCode": 572,
+                    "projectName": "Research & Project approval (Part 3) ",
+                    "startedOn": "Aug 25, 2023 6:00 AM",
+                    "deadline": "Sep 3, 2023 6:00 Am"
+                }
+            ],
+            "secondChance": 
+            [
+                {
+                    "id": 1,
+                    "progress": "60.0% done",
+                    "projectCode": 571,
+                    "projectName": "Research & Project approval (Part 2)",
+                    "startedOn": "Aug 25, 2023 6:00 AM",
+                    "deadline": "Sep 7, 2023 6:00 Am"
+                },
+                {
+                    "id": 2,
+                    "progress": "50.0% done",
+                    "projectCode": 361,
+                    "projectName": "Research & Project approval (Part 1)",
+                    "startedOn": "Aug 25, 2023 6:00 AM",
+                    "deadline": "Sep 5, 2023 6:00 Am"
+                },
+                {
+                    "id": 3,
+                    "progress": "70.0% done",
+                    "projectCode": 311,
+                    "projectName": "0x1A. Application server",
+                    "startedOn": "Aug 25, 2023 6:00 AM",
+                    "deadline": "Sep 2, 2023 6:00 Am"
+                }
+            ]
+        }
+    },
+    "motivational" : 
+    {
+        "id": 1,
+        "quote": "When everything seems to be going against you, remember that the airplane takes off against the wind not with it."
+    },
+    "memes" : 
+    {
+        "id": 1,
+        "image": "../images/20230820_090019 2.png",
+        "caption": "This is literally like the end of the world, front end developers cant relate."
+    },
+    "trailblazers" :
+    {
+        "id": 1,
+        "image": "./images/Screenshot_20230823-225755_Gmail2.png"
+    }
+}

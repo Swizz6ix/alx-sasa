@@ -1,0 +1,132 @@
+.header {
+    display: block;
+    top: 0;
+    /* background-color: #89c5c6; */
+    /* background-color: #000; */
+    background: var(--background);
+    height: 85px;
+    /* width: 100%; */
+    /* display: flex; */
+    /* flex-direction: column; */
+    position: sticky;
+    /* justify-content: center; */
+    border: 1px solid #89c5c6;
+    box-shadow: 0px 4px 4px 0px rgb(82, 2, 161, 0.25);
+    z-index: 100;
+}
+
+.header__width {
+    max-width: 1600px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.header__content {
+    /* width: 100%; */
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    
+    
+}
+
+.header__left {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+}
+
+.header__star {
+    margin-right: 20px;
+}
+
+.header__logo, .header__inProgress, .header__welcome {
+    background-color: white;
+    display: flex;
+    width: 40%;
+    height: 40px;
+    border-bottom: 1px solid #5602a1;
+    box-shadow: 0px 4px 4px 0px rgb(82, 2, 161, 0.25);
+}
+
+
+.header__logo > h1, .header__inProgress > h1, .header__welcome > h1 {
+    font-size: 17px;
+    padding-left: 5px;
+    align-self: center;
+    flex-grow: 1;
+}
+
+@media screen and (max-width: 1098px) {
+    h1 {
+        font-size: 15px;
+        padding-left: 0;
+    }
+}
+
+.header__inProgress > h1, .header__welcome > h1 {
+    display: flex;
+    justify-content: center;
+    letter-spacing: 0.8px;
+}
+
+.header__logo {
+    width: 152px;
+
+}
+
+.header__center, .header__right {
+    margin-left: 20px;
+}
+
+.header__avatar {
+    background-color: pink;
+    height: 60px;
+    width: 60px;
+    border-radius: 50px;
+}
+
+/* .header__right {
+    
+    
+} */
+
+/* .leftColor__bar {
+    background-color: red;
+    height: 40px;
+    width: 12.5px;
+    /* margin-right: 8px;  */
+    /* align-self: end; */
+/* } */
+
+.middleColor__bar {
+    display: flex;
+}
+
+.top__star {
+    position: absolute;
+    top: 0;
+    right: 60%;
+    /* margin-bottom: 5px; */
+}
+
+@media screen and (max-width: 900px) {
+    .header {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 769px) {
+    .header__width {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .header__star {
+        margin-right: 5px;
+    }
+
+}

@@ -1,0 +1,119 @@
+.trackMobile {
+    height: 646px;
+    /* margin-bottom: 40px; */
+}
+
+.trackMobile__width {
+    max-width: 1600px;
+    /* padding-left: 140px; */
+    /* padding-right: 140px; */
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.trackMobile__content {
+    background-color: var(--background);
+    height: 646px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+}
+
+.trackMobile__header {
+    /* background-color: #fff; */
+    margin-left: 40px;
+    margin-top: 20px;
+    padding: 30px;
+    height: 448px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #ff3b3c;
+
+}
+
+.trackMobile__header > h1, .trackMobile__text {
+    transition: transform 450ms;
+}
+
+.trackMobile__header > h1:hover, .trackMobile__text:hover {
+    transform: scale(1.08);
+}
+
+.trackMobile__body {
+    /* background-color: #F8CF5B; */
+    display: flex;
+    
+}
+
+.trackMobile__inner {
+    display: flex;
+    align-self: center;
+}
+
+.trackMobile__text {
+    /* max-width: 300px;
+    display: flex;
+    align-self: center; */
+    color: #074c6d;
+
+}
+
+.trackMobile__phone {
+    background-color: #ff3b3c;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    display: flex;
+    position: relative;
+}
+
+.trackMobile__phone > img {
+    transition: transform 450ms;
+}
+
+.trackMobile__phone > img:hover {
+    transform: scale(1.08);
+}
+
+.small__logo {
+    width: 70px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+@media screen and (max-width: 1102px) {
+    .trackMobile {
+        height: fit-content;
+        margin-bottom: 40px;
+    }
+
+    .trackMobile__content {
+        height: fit-content;
+        padding-bottom: 30px;
+    }
+}
+
+@media screen and (min-width: 1101px) {
+    .trackMobile {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 821px) {
+    .trackMobile__content > div:nth-last-of-type(2) {
+        order: 1;
+    }
+}
+
+@media screen and (max-width: 511px) {
+    .trackMobile__content {
+        /* margin-top: 245px; */
+    }
+}

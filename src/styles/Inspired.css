@@ -1,0 +1,114 @@
+.inspired {
+    width: 100%;
+    height: 646px;
+    background-color: var(--background);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-top: var(--line);
+}
+
+.inspired__width {
+    max-width: 1600px;
+    /* margin-right: auto; */
+    /* margin-left: auto; */
+    padding-left: 140px;
+    padding-right: 140px;
+}
+
+.inspired__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.inspired__text {
+    display: flex;
+    flex-direction: column;
+    width: 202px;
+    height: 300px;
+    padding: 20px;
+    margin-bottom: 20px;
+    justify-content: space-evenly;
+    background-color: var(--background);
+    color: var(--text);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    transition: transform 450ms;
+}
+
+.inspired__text:hover {
+    transform: scale(1.08);
+}
+
+.inspired__text > h3 {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.inspired__headline  {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.inspired__phone {
+    background-color: #000;
+    height: 400px;
+    width: 300px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    position: relative;
+    transition: transform 450ms;
+}
+
+.inspired__phone > img {
+    transition: transform 450ms;
+}
+
+.inspired__phone > img:hover {
+    transform: scale(0.68);
+}
+
+.inspired__img {
+    height: 350px;
+}
+
+.phone__logo {
+    width: 70px;
+    display: flex;
+    align-self: flex-end;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.svg {
+    align-self: center;
+}
+
+@media screen and (max-width: 1200px) {
+    .inspired__width {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .inspired {
+        height: fit-content;
+        margin-bottom: 50px;
+    }
+
+    .inspired__width {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}

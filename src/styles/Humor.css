@@ -1,0 +1,97 @@
+.humor {
+    width: 100%;
+    /* background-color: yellowgreen; */
+    height: 646px;
+}
+
+.humor__width {
+    max-width: 1600px;
+    padding-left: 140px;
+    padding-right: 140px;
+}
+
+.humor__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+    height: 646px;
+    flex-wrap: wrap;
+    background-color: var(--background);
+}
+
+.humor__phone {
+    width: 300px;
+    height: 400px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #074c6d;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    transition: transform 450ms;
+}
+
+.humor__phone > img {
+    transition: transform 450ms;
+}
+
+.humor__phone > img:hover {
+    transform: scale(0.68);
+}
+
+.humor__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 300px;
+    /* height: 300px; */
+    padding: 20px;
+    color: #fff;
+    background: #074c6d;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    right: 0;
+    transition: transform 450ms;
+}
+
+.humor__text:hover {
+    transform: scale(1.08);
+}
+.tiny__logo {
+    width: 70px;
+    display: flex;
+    align-self: flex-end;
+}
+
+.humor__add {
+    /* background-color: #F8CF5B; */
+    /* color: #074C6D; */
+    color: #fff;
+    padding: 10px;
+}
+
+.humor__add > p {
+    margin-bottom: 5px;
+    /* background-color: #fff; */
+}
+
+@media screen and (max-width: 1025px) {
+    .humor__width {
+        padding-left: 0;
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .humor {
+        height: fit-content;
+        margin-bottom: 50px;
+    }
+
+    .humor__content {
+        height: fit-content;
+        padding: 0;
+    }
+}

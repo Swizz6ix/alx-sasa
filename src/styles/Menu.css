@@ -1,0 +1,129 @@
+.menu{
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background-color: var(--mobileMenu);
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+
+}
+
+.menu__content {
+    display: none;
+    list-style: none;
+    margin-top: 10px;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+
+.menu__content > li {
+    margin-right: 10px;
+    cursor: pointer;
+    /* background-color: #fff; */
+    width: fit-content;
+    padding: 5px;
+    border-top-right-radius: 8px;
+    box-shadow: 0px 4px 4px 0px rgb(82, 2, 161, 0.25);
+}
+
+.menu__content > li > a {
+    text-decoration: none;
+    color: var(--text);
+}
+
+.menu__content > li:hover{
+    background-color: #ff3b3c;
+    color: #fff !important;
+}
+
+.menu__item:hover {
+    color: #fff;
+}
+
+.menu__mobileButton {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu__option {
+    color: #fff;
+    padding: 10px;
+    letter-spacing: 1px;
+    font-family: inter;
+    font-style: italic;
+    font-weight: lighter;
+    border-bottom: 1px solid #f8cf5b;
+}
+
+.menu__mobileDown {
+    background-color: #074c6d;
+    height: 500px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    animation-name: rollin;
+    animation-duration: 2s;
+}
+
+.close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-top: 5px;
+    margin-right: 5px;
+}
+
+.closeIcon {
+    color: #f8cf5b !important;
+}
+
+.homeMenu {
+    color: var(--mobileIcon) !important;
+}
+
+.menu__logo {
+    width: 70px;
+    display: flex;
+    align-self: flex-end;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+
+.menu__mobileClose {
+    display: none;
+}
+
+@keyframes rollin {
+    from {
+        transform: translate3d(-100%, 0, 0);
+        visibility: visible;
+        opacity: -2;
+    }
+    
+    to {
+            transform: translate3d(0, 0, 0%);
+        }
+}
+
+
+@media screen and (min-width: 769px) {
+    .menu__content{
+        display: flex;
+    }
+    .menu__mobileButton {
+        display: none;
+    }
+
+    .menu__mobileDown {
+        display: none;
+    }
+}
+

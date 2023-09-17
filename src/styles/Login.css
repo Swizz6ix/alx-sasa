@@ -1,0 +1,231 @@
+.login {
+    display: block;
+    width: 100%;
+    height: 646px;
+    margin-bottom: 50px;
+}
+
+.login__width {
+    margin-left: auto;
+    margin-right: auto;
+    /* padding-left: 140px; */
+    /* margin-right: 140px; */
+    max-width: 1600px;
+}
+
+.login__content {
+    background-color: #074C6D;
+    background-image: url("alx-sasa_desktop3.png");
+    display: flex;
+    align-items: center;
+    /* height: 460px; */
+    height: 646px;
+    justify-content: space-evenly;
+    width: 100%;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+.login__loginBox {
+    position: relative;
+    background-color: #fff;
+    width: 300px;
+    height: 400px;
+    margin-left: 20px;
+    /* margin-top: 10px ; */
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    align-items: center;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    z-index: 2;
+}
+.login__loginBoxContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    /* justify-content: space-evenly; */
+    margin-top: 30px;
+}
+
+.login__loginBoxContent > img {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    bottom: 80px;
+    /* z-index: 1; */
+}
+
+.login__loginBoxContent > h1 {
+    font-size: 40px;
+    font-style: italic;
+    letter-spacing: 0.8px;
+    line-height: normal;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #F8CF5A;
+}
+
+.login__place {
+    z-index: 1;
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* justify-content: space-between;  */
+    /* align-items: center; */
+}
+
+.login__details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    justify-content: space-between; 
+}
+
+.login__details > h6 {
+    margin-bottom: 10px;
+    font-weight: 400;
+    letter-spacing: 0.8px;
+    line-height: normal;
+}
+
+.login__details > input {
+    outline-width: 0;
+}
+
+.login__btn {
+    background-color: #ff3b3c !important;
+}
+
+.login__forget {
+    display: flex;
+    align-self: flex-end;
+    font-style: italic;
+    font-size: 8px;
+    color: #ff3b3c;
+    cursor: pointer;
+}
+
+.login__down {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.login__rem {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    z-index: 1;
+}
+
+.login__rem > h6 {
+    margin-left: 5px;
+}
+
+.images {
+    /* max-width: 200px; */
+}
+
+.headliner {
+    display: flex;
+    flex-direction: column;
+    transition: transform 450ms;
+}
+
+.headliner:hover {
+    transform: scale(1.08);
+}
+
+.headliner > p {
+    align-self: flex-end;
+    /* color: #89c5c6; */
+    color: #fff;
+    margin-right: 10px;
+}
+
+.text > h1 {
+    color: #F8CF5A;
+    text-align: center;
+    font-family: Inter;
+    font-size: 46px;
+    font-style: italic;
+    font-weight: 700;
+    line-height: normal;
+}
+.shadow {
+    opacity: 0.25;
+    transform: rotate(37.336deg);
+    color: #000;
+    font-family: Inter;
+    font-size: 64px !important;
+    font-style: italic;
+    font-weight: 700;
+    line-height: normal;
+    display: flex;
+    align-self: center;
+    position: absolute;
+    top: 45%;
+}
+
+.water__logo {
+    width: 70px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    z-index: 5;
+}
+
+@media screen and (max-width: 980px) {
+    .login__width {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .headliner > p {
+        align-self: center;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .login__width {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+@media screen and (max-width: 530px) {
+    .login__content {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .login__content > div:nth-of-type(1) {
+        order: 1;
+        margin-top: 40px;
+    }
+
+    .login__phones {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    .login__loginBox {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .headliner > h1 {
+        font-size: 40px;
+    }
+
+    .shadow {
+        font-size: 45px !important;
+    }
+}
