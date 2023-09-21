@@ -1,14 +1,120 @@
-import React, { useState } from 'react'
-import '../styles/MemeCard.css'
-import DoHard from './DoHard'
-import data from "../dummie.json"
-import axiosInstance from '../Hooks/instance'
-// import trailImg from "../images/Screenshot_20230823-225755_Gmail2.png"
+import React, { ChangeEvent, useEffect, useState } from 'react';
+import '../styles/MemeCard.css';
+import DoHard from './DoHard';
+import axiosInstance from '../Hooks/instance';
+import axios from 'axios';
+import { Buffer } from 'buffer';
+// import { ToastContainer } from 'react-toastify';
+// import 'react-toastify/dist/reactToastify.css';
 
 function MemeCard() {
-    const trailblazers = data.trailblazers
-    const memes = data.memes
+    // State management of all states
+    const [buffer, setBuffer] = useState<any>([]);
+    const [posts, setPosts] = useState<any>([]);
+    const [imageFile, setImageFile] = useState<any>();
+    const [current, setCurrent] = useState(0);
+    const [caption, setCaption] = useState('');
+    const [quote, setQuote] = useState<any>({
+        quote: " ",
+    });
+    
 
+    // Receives the inputted image file from the input's tag
+    const imageInput = (event: ChangeEvent) => {
+        const target = event.target as HTMLInputElement;
+        const files  =( target.files as FileList)[0];
+        console.log("nd", files)
+        handleImages(files)
+    }
+
+    // Receives the inputted caption from the textarea
+    const captionInput = (event: { preventDefault: () => void; target: { value: any; }; }) =>
+    {
+        event.preventDefault();
+        setCaption(event.target.value);
+    }
+
+    // Validate image files format before upload
+    const imageMineType = /image\/(png|jpg|jpeg|gif)/gm;
+    const handleImages = (file: any) => {
+        if ([imageMineType].includes(file.type))
+            return file;
+        showImage(file)
+        setImageFile(file)
+    };
+
+    // Handles the preview image, for users to see before upload
+    const imagePreview = document.querySelector(".previewHolder");
+    const showImage = (image: any) => {
+        const reader = new FileReader();
+        reader.readAsDataURL(image);
+        reader.addEventListener('load', (event) => {
+            const div = document.createElement('div');
+            div.classList.add('imagePreview');
+            div.id = "preImg"
+            div.innerHTML = `
+                <button className="p" id="close">Close </button>
+                <img src="${event.target?.result}" alt="${image.name}" />
+                <p>name : ${image.name}</p>
+                <p>size : ${formatBytes(image.size)}
+            `;
+            imagePreview?.append(div);
+            const close = document.getElementById('close');
+            close?.addEventListener('click', function clear (){
+                div.remove();
+            });
+            const btn = document.getElementById('uploadBtn');
+            btn?.addEventListener('click',  function unmount() {
+                div.remove()
+            });
+        });
+    };
+
+    // Calculate and display the size of the image under the preview image
+    function formatBytes(size: number, decimals = 2) {
+        if (size === 0) return '0 bytes';
+        const k = 1024;
+        const dm = decimals < 0 ? 0 : decimals;
+        const sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'];
+        const i = Math.floor(Math.log(size) / Math.log(k));
+        return parseFloat((size / Math.pow(k, i)).toFixed(dm)) + ' ' + sizes[i]
+    }
+
+    // Handles MEMES image and caption upload to the server (POST request)
+    const uploadImages = async (event: { preventDefault: () => void; }) => {
+        event.preventDefault()
+        const formData = new FormData();
+        formData.append('file', imageFile, imageFile.originalname)
+        formData.append('caption', caption);
+        const response = await axios.post("memes/new", formData, {
+            headers: {
+                "Content-Type": "multipart/form-data"
+            }
+        })
+        return response;
+    };
+
+    // Clears the MEMES textarea and select file input after upload//
+    const captionText = document.getElementById('caption') as HTMLInputElement | null;
+    const fileImage = document.getElementById('file') as HTMLInputElement | null;
+    const uploadPost = document.getElementById('uploadBtn')
+    uploadPost?.addEventListener('click', function clear(){
+        if (fileImage != null)
+            fileImage.value = '';
+        if (captionText != null)
+            captionText.value = '';
+    })
+    
+
+    // handles the input of new text in the motivational quotes textarea
+    const handleChange = (event: { preventDefault: () => void; target: { value: any } }) => {
+        event.preventDefault();
+        setQuote({
+            quote: event.target.value,
+        });
+    };
+
+    // Clearing the Motivational quote textarea after uploading quote
     const textarea = document.getElementById('quote') as HTMLInputElement | null;
     const btn = document.getElementById('btn')
     btn?.addEventListener('click', function clear(){
@@ -16,18 +122,7 @@ function MemeCard() {
             textarea.value = ''
     })
 
-    const [quote, setQuote] = useState<any>({
-        quote: " ",
-    });
-
-    const handleChange = (event: { preventDefault: () => void; target: { value: any } }) => {
-        event.preventDefault();
-
-        setQuote({
-            quote: event.target.value,
-        });
-    };
-
+    // Handles the post request of motivational quotes
     const submitForm = (event: { preventDefault: () => void }) => {
         event.preventDefault();
 
@@ -40,6 +135,74 @@ function MemeCard() {
             console.log("new quote", data)
         })
     }
+
+    // Fetch the image buffer stored in the database
+    // convert the buffer to base64
+    // pass the base64 string to the app and render it as image
+    const imageData: any = [];
+    const imageType: any = [];
+    useEffect(() => {
+        axiosInstance({
+            method: "GET",
+            url: "trailblazer/all"
+        })
+        .then((data) => {
+            setBuffer(data)
+        })
+    }, [])
+    buffer.forEach((element: { data: any, type: string }) => {
+        const imageString =  Buffer.from(element.data.data, "base64")
+        const image = imageString.toString('base64')
+        imageData.push(image)
+        imageType.push(element.type)
+    });
+
+    // MEME data structure or class instance that will receive the responds to the GET request
+    // and render it 
+    class meme {
+        caption: string;
+        name: string;
+        type: string;
+        imgStr: string;
+        constructor( caption: string, name: string, type: string, imgStr: string) {
+            this.caption = caption;
+            this.name = name;
+            this.type = type;
+            this.imgStr = imgStr;
+        }
+    }
+
+    // sends GET request to server for the memes post
+    // receives responds, convert image buffer to Base64
+    // creates a new instance of the meme data's structure for each post(image and caption)
+    // with caption, image name, type and base64 strings as arguments
+    const memePosts: any = [];
+    useEffect(() => {
+        axiosInstance({
+            method: 'GET',
+            url: "memes/all"
+        })
+        .then((data) => {
+            setPosts(data)
+        })
+    },[])
+    posts.forEach((post: any) => {
+        const mediaBuffer = post.data.data;
+        const mediaBlob = Buffer.from(mediaBuffer, "base64");
+        const mediaString = mediaBlob.toString('base64');
+        memePosts.push(new meme( post.caption, post.name, post.type, mediaString ))
+    });
+
+    // Memes Image slide effect 
+    const length = memePosts.length;
+    const nextSlide = () => {
+        setCurrent(current === length - 1 ? 0 : current + 1)
+    }
+    if (!Array.isArray(memePosts) || memePosts.length <= 0) {
+        return null;
+    }
+
+    setTimeout(nextSlide, 10000)
 
     return (
         <div className='memeCard'>
@@ -57,23 +220,45 @@ function MemeCard() {
                                     <rect width="12.5" height="60" fill="#9EF7B1"/>
                                 </svg>
                             </div>
-                            <div className='memeCard__cardImg'>
-                                <img src={memes.image} alt={memes.caption} />
-                            </div>
-                            <div className='memeCard__cardDesc'>
-                                <p>
-                                    {memes.caption}
-                                </p>
-                            </div>
+                            {/** Renders MEME posts with slide effect  */}
+                            {memePosts.map((post: any, idx: number) => (
+                                <>
+                                    <div className={idx === current ? 'memeCard__cardImg': "slideHide"}>
+                                        <img  key={idx} src={`data:${post.type};base64,${post.imgStr}`} alt={post.name} />
+                                    </div>
+                                    <div key={idx} className={ idx === current ? 'memeCard__cardDesc' : 'slideHide'}>
+                                        <p className={ idx === current ? "slideView" : 'slideHide'} key={idx}>
+                                            {post.caption}
+                                        </p>
+                                    </div>
+                                </>
+                            ))}
                         </div>
-                        <div className='addMeme'>
-                            <input type="file" />
+                        {/**Handles the form to add memes */}
+                        <form
+                            onSubmit={uploadImages}
+                            className='addMeme'>
+                            <input 
+                                type="file" 
+                                id='file'
+                                className='files' 
+                                onChange={imageInput} 
+                                name='file' />
                             <div className='addMeme__desc'>
-                                <textarea className='memeCard__caption' rows={2} cols={38} placeholder='Caption ...' ></textarea>
+                                <textarea 
+                                    onChange={captionInput}
+                                    id='caption'
+                                    name='caption' 
+                                    className='memeCard__caption' rows={2} 
+                                    cols={38} placeholder='Caption ...' >
+                                </textarea>
                             </div>
-                            <input className='memeCard__addBtn'  type="submit" value="add meme" />
-                        </div>
+                            <input className='memeCard__addBtn' id='uploadBtn'  type="submit" value="add meme" />
+                        </form>
+                        {/**Holds the preview image before upload */}
+                        <div className='image_preview'></div>
                     </div>
+                    <div className='previewHolder'></div>
                     <div className='memeCard__down'>
                         <div className='memeCard__emailCard'>
                             <div className='memeCard__emailCardHeader'>
@@ -86,12 +271,23 @@ function MemeCard() {
                                     <rect width="12.5" height="60" fill="#9EF7B1"/>
                                 </svg>
                             </div>
+                            {/**Renders the trailblazer image */}
                             <div className='memeCard__emailCardImg'>
-                                <img src={trailblazers.image} alt="trailblazers of the week" />
+                                <img   
+                                    src={ `data:${imageType};base64,${imageData}` } 
+                                    alt="trailblazers of the week" />
                             </div>
                         </div>
+                        {/**Handles the form to add motivational quotes */}
                         <form className='addMotivational' id='addQuote' onSubmit={submitForm}>
-                            <textarea id='quote' name="quote"  className='memeCard__textArea' rows={4} cols={30} placeholder="What's your favorite motivational quote" onChange={handleChange}></textarea>
+                            <textarea 
+                                id='quote' 
+                                name="quote"  
+                                className='memeCard__textArea' 
+                                rows={4} cols={30} 
+                                placeholder="What's your favorite motivational quote" 
+                                onChange={handleChange}
+                            ></textarea>
                             <div className='addBtn'>
                                 <button type='submit' id='btn' className='memeCard__addBtn' >add favorite quote</button>
                             </div>

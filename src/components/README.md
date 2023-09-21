@@ -1,0 +1,1 @@
+The component directory houses all reuseable components used in the project

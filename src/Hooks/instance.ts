@@ -1,6 +1,7 @@
 import axios from "axios";
 import type { AxiosRequestConfig  } from "axios";
 
+// Creates an instance of axios
 const instance = axios.create({
     baseURL: "http://localhost:5000/",
     headers: {
@@ -10,16 +11,15 @@ const instance = axios.create({
     }
 });
 
+// Handles axios interceptors, so the useful data can be reached directly
 instance.interceptors.response.use((res) => res.data.data,
 (err) => {
     if (err.response) {
         return Promise.reject(err.response.data);
     }
-
     if (err.request) {
         return Promise.reject(err.request);
     }
-
     return Promise.reject(err.message);
 });
 

@@ -3,6 +3,7 @@ import '../styles/DoubleQuestionCard.css'
 import QuestionLine from './QuestionLine'
 import { useCountdown } from '../Hooks/useCountdown';
 
+// Creating the prop interface for props passed to the DoubleQuestionCard component
 interface dateProps {
     targetDate: any;
     id: any;
@@ -12,6 +13,7 @@ interface dateProps {
 }
 
 const DoubleQuestionCard: React.FC<dateProps> = ({ targetDate, id, progress, projectCode, projectName }) => {
+    // getting the days, hours, minutes and seconds to calculate the deadline for projects in both first and second chances
     const [ _days, _hours, _minutes, _seconds] = useCountdown(targetDate[0])
     const [ days, hours, minutes, seconds] = useCountdown(targetDate[1])
     return (

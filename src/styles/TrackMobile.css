@@ -1,12 +1,9 @@
 .trackMobile {
     height: 646px;
-    /* margin-bottom: 40px; */
 }
 
 .trackMobile__width {
     max-width: 1600px;
-    /* padding-left: 140px; */
-    /* padding-right: 140px; */
     margin-right: auto;
     margin-left: auto;
 }
@@ -22,7 +19,6 @@
 }
 
 .trackMobile__header {
-    /* background-color: #fff; */
     margin-left: 40px;
     margin-top: 20px;
     padding: 30px;
@@ -44,7 +40,6 @@
 }
 
 .trackMobile__body {
-    /* background-color: #F8CF5B; */
     display: flex;
     
 }
@@ -55,11 +50,7 @@
 }
 
 .trackMobile__text {
-    /* max-width: 300px;
-    display: flex;
-    align-self: center; */
     color: #074c6d;
-
 }
 
 .trackMobile__phone {
@@ -109,11 +100,5 @@
 @media screen and (max-width: 821px) {
     .trackMobile__content > div:nth-last-of-type(2) {
         order: 1;
-    }
-}
-
-@media screen and (max-width: 511px) {
-    .trackMobile__content {
-        /* margin-top: 245px; */
     }
 }

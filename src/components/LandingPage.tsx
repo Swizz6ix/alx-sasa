@@ -11,6 +11,7 @@ import About from './About'
 import TrackMobile from './TrackMobile'
 
 function LandingPage() {
+    //REnding all the pages for the landing page
     return (
         <div>
             <LandingHeader />

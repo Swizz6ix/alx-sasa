@@ -1,0 +1,12 @@
+.signOut {
+    display: flex;
+    position: fixed;
+    z-index: 50;
+}
+
+.signOut__btn {
+    outline: none;
+    border: 0px;
+    background-color: var(--text-secondary);
+    color: #fff;
+}

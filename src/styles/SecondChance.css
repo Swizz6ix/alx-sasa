@@ -1,11 +1,6 @@
-.secondChance{
-    /* position: relative; */
-}
-
 .secondChance__width {
     max-width: 1600px;
     margin-left: auto;
-    /* margin-right: auto; */
     position: relative;
     margin-right: 100px;
 }
@@ -24,8 +19,6 @@
 
 .secondChance__title {
     background-color: #ff3b3b;
-    /* width: 450px; */
-    /* height: 60px; */
     display: flex;
     justify-content: center;
     border-top: 1px solid #5602A1;
@@ -46,16 +39,8 @@
     margin-left: 10px;
 }
 
-.secondChance__div {
-    /* margin-top: -10px; */
-}
-
 .secondChance__hard {
     display: flex;
-    /* flex-direction: column; */
-    /* justify-content: flex-end; */
-    /* align-self: flex-end; */
-    /* align-items: flex-end; */
     right: 138px;
     position: absolute;
 }

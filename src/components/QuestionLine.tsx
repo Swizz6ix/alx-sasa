@@ -1,6 +1,7 @@
 import React from 'react'
 import styled  from 'styled-components'
 
+// Creates the props interface of the countdown timer
 interface countDownProps {
     days: number,
     hours: number,
@@ -50,7 +51,8 @@ const QuestionLine:React.FC<countDownProps> = ({days, hours, minutes, seconds, i
             break;
     }
 
-    //conditioning days, hours, minutes and seconds
+    //conditioning hours, to change depending on the time left 
+    // till the end of the project
     if (hoursLeft) {
         hrsBox = "#f8cf5b"
     } else if (fewHours) {
@@ -60,6 +62,8 @@ const QuestionLine:React.FC<countDownProps> = ({days, hours, minutes, seconds, i
         hrsBox = '#000'
     }
 
+    // Color changing logic for the minutes box 
+    // depending on the total time left to the end of the project
     if (minsLeft) {
         minsBox = "#f8cf5b"
     } else if (fewMins) {
@@ -68,6 +72,8 @@ const QuestionLine:React.FC<countDownProps> = ({days, hours, minutes, seconds, i
         minsBox = "#000"
     }
 
+    // Color changing logic for the seconds box 
+    // depending on the total time left to the end of the project
     if (secsLeft) {
         secsBox = "#f8cf5b"
     } else if (fewSecs) {
@@ -76,6 +82,8 @@ const QuestionLine:React.FC<countDownProps> = ({days, hours, minutes, seconds, i
         secsBox = '#000'
     }
 
+    // Handles the color changing mechanism of the days box 
+    // depending on the days left to the end of the project
     switch (true) {
         case days === 1:
             daysBox = "#f8cf5b"

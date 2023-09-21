@@ -4,7 +4,7 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import smallLogo from "../images/logo.png"
-import { Zoom, LightSpeed, Fade }from "react-reveal";
+import {  LightSpeed, Fade }from "react-reveal";
 
 const About:React.FC = () => {
     return (
@@ -12,14 +12,14 @@ const About:React.FC = () => {
             <div className='about__width'>
                 <div className='about__content'>
                     <div className='about__up'>
-                        <LightSpeed left cascade>
                             <div className='about__upLeft'>
                                 <img className='about__logo' src={smallLogo} alt="" />
-                                <h1>about</h1>
-                                <h1>ALX SASA</h1>
+                                <LightSpeed left cascade>
+                                    <h1>about</h1>
+                                    <h1>ALX SASA</h1>
+                                </LightSpeed>
                                 <a href="https://github.com/Swizz6ix/alx-sasa"><GitHubIcon /><span>project repo</span></a>
                             </div>
-                        </LightSpeed>
                         <div className='about__upRight'>
                             <Fade bottom big cascade>
                                 <div className='about__text'>
@@ -94,13 +94,13 @@ const About:React.FC = () => {
                                 </div>
                             </Fade>
                             <div className='about__socials'>
-                                <Zoom left cascade>
+                                {/* <Zoom left cascade> */}
                                 <ul className='socials__list'>
-                                    <li><a href="www/twitter.com/swizz6ix"><TwitterIcon /><span className='list__items'>twitter(X)</span></a></li>
-                                    <li><a href='wwww.linkedin.com/in/ferdinand-charles-82901a87'><LinkedInIcon /><span className='list__items'>linkedIn</span></a></li>
+                                    <li><a href="www.twitter.com/swizz6ix"><TwitterIcon /><span className='list__items'>twitter(X)</span></a></li>
+                                    <li><a href='www.linkedin.com/in/ferdinand-charles-82901a87'><LinkedInIcon /><span className='list__items'>linkedIn</span></a></li>
                                     <li><a href='wwww.github.com/swizz6ix'><GitHubIcon/><span className='list__items'>GitHub</span></a></li>
                                 </ul>
-                                </Zoom>
+                                {/* </Zoom> */}
                             </div>
                         </div>
                     </div>

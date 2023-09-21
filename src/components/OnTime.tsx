@@ -6,6 +6,7 @@ import { Zoom, Fade }from "react-reveal";
 
 
 const OnTime:React.FC = () => {
+    // renders the countdown timer card in the landing page
     return (
         <div className='onTime'>
             <div className='onTime__width'>

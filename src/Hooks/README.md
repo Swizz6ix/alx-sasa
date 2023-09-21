@@ -1,0 +1,1 @@
+The Hooks directory houses reuseable hooks and instances export to the app's components for usage.

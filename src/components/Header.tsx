@@ -1,22 +1,10 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import '../styles/Header.css'
 import {Avatar} from '@mui/material'
-import data from "../dummie.json"
-import axiosInstance from '../Hooks/instance'
+import { useDataLayerValue } from '../Hooks/useDatalayer';
 
 function Header() {
-    const [ user, setUser ] = useState<any>([])
-    useEffect(() => {
-        axiosInstance({
-            method: "GET",
-            url: "user/1"
-        })
-        .then((data) => {
-            console.log(data)
-            setUser(data)
-        })
-    },[])
-    console.log(user)
+    const [{ user } ] = useDataLayerValue();
     return (
         <div className="header">
             <div className='header__width'>
@@ -64,13 +52,12 @@ function Header() {
                         </div>
                         <div className='header__welcome'>
                             <div className='rightColor__bar'></div>
-                            <h1>Hi!! {user.username}...</h1>
+                            <h1>Hi!! {user.displayName}...</h1>
                             <div className='rightColor__bar'></div>
                         </div>
                     </div>
                     <div className='header__center'>
-                        <Avatar alt={user.username} src={user.avatar} />
-                        {/* <div className='header__avatar'></div> */}
+                        <Avatar alt={user.displayName} src={user.photoURL} />
                     </div>
                     <div className='header__right'>
                         <div className='header__start'>

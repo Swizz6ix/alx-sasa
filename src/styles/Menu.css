@@ -20,7 +20,6 @@
 .menu__content > li {
     margin-right: 10px;
     cursor: pointer;
-    /* background-color: #fff; */
     width: fit-content;
     padding: 5px;
     border-top-right-radius: 8px;

@@ -1,6 +1,5 @@
 .humor {
     width: 100%;
-    /* background-color: yellowgreen; */
     height: 646px;
 }
 
@@ -47,7 +46,6 @@
     flex-direction: column;
     justify-content: space-evenly;
     width: 300px;
-    /* height: 300px; */
     padding: 20px;
     color: #fff;
     background: #074c6d;
@@ -66,15 +64,12 @@
 }
 
 .humor__add {
-    /* background-color: #F8CF5B; */
-    /* color: #074C6D; */
     color: #fff;
     padding: 10px;
 }
 
 .humor__add > p {
     margin-bottom: 5px;
-    /* background-color: #fff; */
 }
 
 @media screen and (max-width: 1025px) {

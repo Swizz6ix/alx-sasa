@@ -18,7 +18,7 @@ code {
 :root {
   --background: black;
   --primary: #074C6D;
-  --secondary: #89c5c6;
+  --text-secondary: #f8cf5b;
   --accent: #f8cf5b;
   --text: #fff;
   --questionColor: #074C6D;
@@ -35,7 +35,7 @@ code {
 [data-theme='light'] {
   --background: white;
   --text-primary: white;
-  --text-secondary: #fff;
+  --text-secondary: #89c5c6;
   --accent: #fff;
   --text: #000;
   --questionColor: #fff;

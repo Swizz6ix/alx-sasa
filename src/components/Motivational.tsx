@@ -3,37 +3,38 @@ import '../styles/Motivational.css'
 import axiosInstance from '../Hooks/instance';
 
 const Motivational:React.FC = () => {
+    //state management for the motivational quote and slide effect respectively
     const [quote, setQuote] = useState<any>([]);
     const [current, setCurrent] = useState(0);
-    let slides: any = []
+    let slides: any = [] //array to hold all quotes for slide effect
 
+    // Handles the GET request for motivational quotes
+    // push each quote in the response to slides array for the sliding effect
     useEffect(() => {
         axiosInstance({
             method: "GET",
             url: "motivation/all",
         })
         .then((data) => {
-            console.log(data)
                 setQuote(data)
         })
     }, [])
-        quote.forEach((element: { quote: string; }) => {
-            slides.push(element.quote)
-        });
+    quote.forEach((element: { quote: string; }) => {
+        slides.push(element.quote)
+    });
 
 
     // Handles the quote sliding effect every 8 seconds
     const length = slides.length;
-
     const nextSlide = () => {
         setCurrent(current === length - 1? 0 : current + 1);
     }
-
     if (!Array.isArray(slides) || slides.length <= 0) {
         return null
     }
+    setTimeout(nextSlide, 100000);
 
-    setTimeout(nextSlide, 100000)
+
     return (
         <div className='motivational'>
             <div className='motivational__width'>

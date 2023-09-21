@@ -3,6 +3,7 @@ import '../styles/QuestionCard.css'
 import QuestionLine from './QuestionLine'
 import { useCountdown } from '../Hooks/useCountdown'
 
+// Creates the prop interface for project elements
 interface dateProps {
     targetDate: number;
     id: number;
@@ -12,7 +13,9 @@ interface dateProps {
 }
 
 const QuestionCard: React.FC<dateProps> = ({ targetDate, id, progress, projectCode, projectName }) => {
-        const [days, hours, minutes, seconds] = useCountdown(targetDate);
+    //handles the time left for each project, in times of 
+    //days, hours, minutes and seconds
+    const [days, hours, minutes, seconds] = useCountdown(targetDate);
     return (
         <div className='questionCard'>
             <div className='questionCard__card'>

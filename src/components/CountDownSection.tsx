@@ -8,9 +8,12 @@ import axiosInstance from '../Hooks/instance'
 
 
 const CountDownSection:React.FC = () => {
+    // State management for the both first and second chance 
     const [firstChance, setFirstChance] = useState<any>([]);
     const [secondChance, setSecondChance] = useState<any>([])
 
+    // Array variables to hold different element from the database
+    // for both first chance and second chance respectively
     let id:any = [];
     let progress:any = [];
     let projectCode:any = [];
@@ -22,6 +25,9 @@ const CountDownSection:React.FC = () => {
     let endTime:any = [];
     let _endTime:any = [];
 
+    // Handles the GET request for both first and chance respectively
+    // through the created axiosInstance
+    // Gets all the available projects from the database
     useEffect(() => {
         axiosInstance({
             method: "GET",
@@ -40,6 +46,8 @@ const CountDownSection:React.FC = () => {
         });
     }, [])
     
+    // For the first chance, iterate through the response from the data and 
+    // for each element push it into the array 
     firstChance.forEach((element: {
         deadline: string | number | Date
         projectName(projectName: string): string
@@ -55,6 +63,8 @@ const CountDownSection:React.FC = () => {
             }
     );
 
+    // For the second chance, iterate through the response from the data and 
+    // for each element push it into the array 
     secondChance.forEach((el: {
         deadline: string | number | Date 
         projectName(projectName: string): string; 
@@ -68,6 +78,7 @@ const CountDownSection:React.FC = () => {
         _endTime.push(new Date(el.deadline).getTime())
     })
     
+    // Deadline for first chance  and second chance respectively
     const timeLeft = endTime;
     const _timeLeft = _endTime
 

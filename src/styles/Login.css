@@ -8,8 +8,6 @@
 .login__width {
     margin-left: auto;
     margin-right: auto;
-    /* padding-left: 140px; */
-    /* margin-right: 140px; */
     max-width: 1600px;
 }
 
@@ -18,7 +16,6 @@
     background-image: url("alx-sasa_desktop3.png");
     display: flex;
     align-items: center;
-    /* height: 460px; */
     height: 646px;
     justify-content: space-evenly;
     width: 100%;
@@ -32,10 +29,8 @@
     width: 300px;
     height: 400px;
     margin-left: 20px;
-    /* margin-top: 10px ; */
     display: flex;
     flex-direction: column;
-    /* justify-content: space-between; */
     align-items: center;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     z-index: 2;
@@ -45,7 +40,6 @@
     flex-direction: column;
     align-items: center;
     height: 100%;
-    /* justify-content: space-evenly; */
     margin-top: 30px;
 }
 
@@ -55,7 +49,6 @@
     flex-direction: column;
     align-content: center;
     bottom: 80px;
-    /* z-index: 1; */
 }
 
 .login__loginBoxContent > h1 {
@@ -69,10 +62,6 @@
 
 .login__place {
     z-index: 1;
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* justify-content: space-between;  */
-    /* align-items: center; */
 }
 
 .login__details {
@@ -125,9 +114,6 @@
     margin-left: 5px;
 }
 
-.images {
-    /* max-width: 200px; */
-}
 
 .headliner {
     display: flex;
@@ -141,7 +127,6 @@
 
 .headliner > p {
     align-self: flex-end;
-    /* color: #89c5c6; */
     color: #fff;
     margin-right: 10px;
 }

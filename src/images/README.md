@@ -1,0 +1,1 @@
+The image directory house the image assets used in the app' landing page

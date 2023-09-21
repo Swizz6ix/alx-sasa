@@ -5,6 +5,7 @@ import motivationImg from "../images/phoneGroup3.png";
 import { Zoom, Slide }from "react-reveal";
 
 const MotivationCard:React.FC = () => {
+    //Renders the Motivational section of the landing page
     return (
         <div className='motivationCard' id='motivation'>
             <div className='motivationCard__width'>
