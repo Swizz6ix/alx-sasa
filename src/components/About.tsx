@@ -18,7 +18,7 @@ const About:React.FC = () => {
                                     <h1>about</h1>
                                     <h1>ALX SASA</h1>
                                 </LightSpeed>
-                                <a href="https://github.com/Swizz6ix/alx-sasa"><GitHubIcon /><span>project repo</span></a>
+                                <a href="https://github.com/Swizz6ix/alx-sasa" target="_blank" rel="noopener noreferrer"><GitHubIcon /><span>project repo</span></a>
                             </div>
                         <div className='about__upRight'>
                             <Fade bottom big cascade>
@@ -96,9 +96,9 @@ const About:React.FC = () => {
                             <div className='about__socials'>
                                 {/* <Zoom left cascade> */}
                                 <ul className='socials__list'>
-                                    <li><a href="www.twitter.com/swizz6ix"><TwitterIcon /><span className='list__items'>twitter(X)</span></a></li>
-                                    <li><a href='www.linkedin.com/in/ferdinand-charles-82901a87'><LinkedInIcon /><span className='list__items'>linkedIn</span></a></li>
-                                    <li><a href='wwww.github.com/swizz6ix'><GitHubIcon/><span className='list__items'>GitHub</span></a></li>
+                                    <li><a href="https://www.twitter.com/swizz6ix" target="_blank" rel="noopener noreferrer"><TwitterIcon /><span className='list__items'>twitter(X)</span></a></li>
+                                    <li><a href='https://www.linkedin.com/in/ferdinand-charles-82901a87' target="_blank" rel="noopener noreferrer"><LinkedInIcon /><span className='list__items'>linkedIn</span></a></li>
+                                    <li><a href='https://www.github.com/swizz6ix' target="_blank" rel="noopener noreferrer"><GitHubIcon/><span className='list__items'>GitHub</span></a></li>
                                 </ul>
                                 {/* </Zoom> */}
                             </div>
