@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/alx-sasa/static/css/main.96966532.css",
+    "main.js": "/alx-sasa/static/js/main.a4e2de82.js",
+    "static/js/787.75b27c8c.chunk.js": "/alx-sasa/static/js/787.75b27c8c.chunk.js",
+    "static/media/alx-sasa_desktop3.png": "/alx-sasa/static/media/alx-sasa_desktop3.468e379118fab86d810a.png",
+    "static/media/alx-sasa_desktop2(1).png": "/alx-sasa/static/media/alx-sasa_desktop2(1).8b4d7d067b0aef8e6ce9.png",
+    "static/media/phoneGroup3.png": "/alx-sasa/static/media/phoneGroup3.a9482b0db7f01236bff8.png",
+    "static/media/phoneHumor.png": "/alx-sasa/static/media/phoneHumor.133efe64a1bf9f79391c.png",
+    "static/media/PhoneGroup.png": "/alx-sasa/static/media/PhoneGroup.2c49c4e8c172797940a2.png",
+    "static/media/GroupPhones.png": "/alx-sasa/static/media/GroupPhones.e4230839e57f2a2279ee.png",
+    "static/media/Component1(1).png": "/alx-sasa/static/media/Component1(1).bd61db7d041f99c8237a.png",
+    "index.html": "/alx-sasa/index.html",
+    "main.96966532.css.map": "/alx-sasa/static/css/main.96966532.css.map",
+    "main.a4e2de82.js.map": "/alx-sasa/static/js/main.a4e2de82.js.map",
+    "787.75b27c8c.chunk.js.map": "/alx-sasa/static/js/787.75b27c8c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.96966532.css",
+    "static/js/main.a4e2de82.js"
+  ]
+}
