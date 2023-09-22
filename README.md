@@ -1,46 +1,35 @@
-# Getting Started with Create React App
+# **ALX SASA**
+![Screenshot of Alx landing page](.\src\images\Screenshot_of_landing_page.png)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+ALX-SASA is a project or task tracking app for ALX, inspired by ALX and peculiar to Alx students. 
+The name SASA translates to CURRENT in  English Language from Africa’s most spoken indigenous \
+language Swahili, giving it that African spirit of tenacity, persistence, ruggedness, doggedness and, originality.
 
-## Available Scripts
 
-In the project directory, you can run:
+## **Background**
+Alx sasa seeks to assist Alx students in keeping track of their current projects as released by alx. 
+It uses the digital clocking system and different color combinations at different intervals to communicate \
+clearly, the time left in a particular project and help eliminate the confusion or misreading that \
+students often experience on the Alx intranet, due to the preferred method chosen by ALX to declare \
+time left on each project.
 
-### `npm start`
+Aside from keeping tabs on current projects, Alx Sasa also endeavors to motivate, inspire, and \ 
+stimulate a little sense of humor among students, by providing sections such as motivational quotes, \
+trailblazers, and memes sections. These sections empowers students to seamlessly add and share their personal \
+motivations, inspirations, and humor among themselves, as a food for thought to guide and encourage them as \
+they seek to achieve their common and respective goals.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Read more about Alx sasa here [The Alx intranet, my ALX SASA](https://www.linkedin.com/pulse/alxintranet-my-alx-sasa-ferdinand-charles/)
+[Landing page](https://swizz6ix.github.io/alx-sasa/)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Pls, endeavour to follow me on my socials, i follow back
+[linkedIn](https://www.linkedin.com/in/ferdinand-charles-82901a87)
+[twitter](https://www.twitter.com/swizz6ix)
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# **Installation**
+Clone the repo to your computer and run npm install to install all dependencies
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+# **Contributing**
+You can fork the repo and add improve on it
