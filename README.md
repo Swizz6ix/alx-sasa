@@ -1,5 +1,5 @@
 # **ALX SASA**
-![Screenshot of Alx landing page](\src\images\Screenshot_of_landing_page.png)
+![Screenshot of Alx landing page](/src/images/Screenshot_of_landing_page.png)
 
 ALX-SASA is a project or task tracking app for ALX, inspired by ALX and peculiar to Alx students. 
 The name SASA translates to CURRENT in  English Language from Africa’s most spoken indigenous \
